@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import { prisma } from '../../app';
 import { config } from '../../config';
+import 'express-session';
 
 export const updateAdmin = async (req: Request, res: Response) => {
   const { email, password } = req.body;

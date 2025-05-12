@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { prisma } from '../app';
+import 'express-session';
 
 declare global {
   namespace Express {

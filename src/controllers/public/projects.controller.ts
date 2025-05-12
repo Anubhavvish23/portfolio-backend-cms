@@ -46,7 +46,7 @@ export const submitRating = async (req: Request, res: Response) => {
   try {
     // Hash IP address for privacy
     const hashedIp = createHash('sha256')
-      .update(ip)
+      .update(ip ?? '')
       .digest('hex');
 
     // Check if user has already rated this project
